@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#index_hemsidan {
+    display: grid;
+    grid-template-areas: 'nai' 'hei' 'pui' 'kii' 'bui' 'foi';
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 25% 20% 20% 20% 5%;
+    width: 100vw;
+    height: 200vh;
+}
+
+#nav_for_index {
+    grid-area: nai;
+    background: red;
+}
+
+.header_for_index {
+    grid-area: hei;
+    background: royalblue;
+}
+
+.puppies {
+    grid-area: pui;
+    background: seagreen;
+}
+
+.kittens {
+    grid-area: kii;
+    background: tomato;
+}
+
+.bunnies {
+    grid-area: bui;
+    background: pink;
+}
+
+.footer_for_index {
+    grid-area: foi;
+    background: slateblue;
+}
+
+#om_oss_hemsidan {
+    display: grid;
+    grid-template-areas: 'nao' 'heo' 'ino' 'pio' 'cro' 'foo';
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 25% 25% 10% 20% 10%;
+    width: 100vw;
+    height: 200vh;
+}
+
+#nav_for_om_oss {
+    grid-area: nao;
+    background: violet;
+}
+
+.header_for_om_oss {
+    grid-area: heo;
+    background: yellowgreen;
+}
+
+.information {
+    grid-area: ino;
+    background: salmon;
+}
+
+.picture_for_om_oss {
+    grid-area: pio;
+    background: brown;
+}
+
+.cred {
+    grid-area: cro;
+    background: blue;
+}
+
+.footer_for_om_oss {
+    grid-area: foo;
+    background: gray;
+}
