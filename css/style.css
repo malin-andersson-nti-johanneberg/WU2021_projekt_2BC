@@ -13,6 +13,36 @@
     height: 200vh;
 }
 
+
+
+.mobile_button {
+    display: none;
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.mobile_button .monbile_bar {
+    height: 3px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile_button {
+        display: flex;
+    }
+    .links_to_delhemsidor {
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+}
+
 #nav_for_index {
     grid-area: nai;
     background: red;
@@ -43,6 +73,26 @@
     background: slateblue;
 }
 
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.puppies_section_img {
+    height: 400px;
+    width: 400px;
+}
+
+.kittens_section_img {
+    height: 400px;
+    width: 400px;
+}
+
+.bunnies_section_img {
+    height: 400px;
+    width: 400px;
+}
+
 #om_oss_hemsidan {
     display: grid;
     grid-template-areas: 'nao' 'heo' 'ino' 'pio' 'cro' 'foo';
@@ -65,6 +115,10 @@
 .information {
     grid-area: ino;
     background: salmon;
+}
+
+.centered_text {
+    text-align: center;
 }
 
 .picture_for_om_oss {
