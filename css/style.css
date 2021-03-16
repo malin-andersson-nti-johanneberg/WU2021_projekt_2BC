@@ -13,39 +13,115 @@
     height: 200vh;
 }
 
-
-
-.mobile_button {
-    display: none;
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    flex-direction: column;
+nav {
+    display: flex;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
 }
 
-.mobile_button .monbile_bar {
-    height: 3px;
-    width: 100%;
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.links_to_delhemsidor {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.puppies {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px 5px;
+}
+
+.puppies_inner_div {
+    flex: 0 0 calc(50% - 16px);
+}
+
+
+.kittens {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px 5px;
+}
+
+
+
+.bunnies {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px 5px;
+}
+
+h2 {
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-    .mobile_button {
+    .burger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        display: block;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+    .links_to_delhemsidor li {
+        text-align: right;
+    }
+    .burger div {
+        width: 50px;
+        height: 10px;
+        background-color: black;
+        border-radius: 10px;
+        margin: 5px 0px;
+        cursor: pointer;
+    }
+    .show{
+        display: block;
+        right: 0;
+    }
+    .burger.visible{
+        display: block;
+    }
+    .navbar{
+        height: 100vh;
+        width: 80vw;
+        position: fixed;
+        top: 0;
+        right: -90vw;
+        transition: left 0.3s;
+        z-index: 10;
+        overflow: hidden;
+    }
+    .puppies {
         display: flex;
-    }
-    .links_to_delhemsidor {
-        display: none;
-    }
-    .navbar {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .kittens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bunnies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 #nav_for_index {
     grid-area: nai;
-    background: red;
+    background: white;
 }
 
 .header_for_index {
