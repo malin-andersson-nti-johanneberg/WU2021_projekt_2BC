@@ -8,9 +8,9 @@
     display: grid;
     grid-template-areas: 'nai' 'hei' 'pui' 'kii' 'bui' 'foi';
     grid-template-columns: 100%;
-    grid-template-rows: 10% 25% 20% 20% 20% 5%;
+    grid-template-rows: 10% 20% 20% 20% 20% 10%;
     width: 100vw;
-    height: 200vh;
+    height: 300vh;
 }
 
 nav {
@@ -40,8 +40,9 @@ li {
 
 .puppies_inner_div {
     flex: 0 0 calc(50% - 16px);
+    width: 40vw;
+    height: 40vh;
 }
-
 
 .kittens {
     display: flex;
@@ -49,7 +50,11 @@ li {
     padding: 10px 5px 5px;
 }
 
-
+.kittens_inner_div {
+    flex: 0 0 calc(50% - 16px);
+    width: 40vw;
+    height: 40vh;
+}
 
 .bunnies {
     display: flex;
@@ -57,11 +62,23 @@ li {
     padding: 10px 5px 5px;
 }
 
-h2 {
+.bunnies_inner_div {
+    flex: 0 0 calc(50% - 16px);
+    width: 40vw;
+    height: 40vh;
+}
+
+.index_sections_h2 {
     text-align: center;
+    position: relative;
 }
 
 @media screen and (max-width: 768px) {
+    #index_hemsidan {
+        grid-template-rows: 10% 10% 25% 25% 25% 5%;
+        width: 100vw;
+        height: 300vh;
+    }
     .burger {
         position: fixed;
         top: 0;
@@ -105,18 +122,69 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px 10px 10px;
     }
 
     .kittens {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px 10px 10px;
     }
     .bunnies {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px 10px 10px;
     }
+
+    #puppies_section_text {
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    #kittens_section_text {
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    #bunnies_section_text {
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+    #puppies_section_img {
+        height: 400px;
+        width: 400px;
+    }
+    
+    #kittens_section_img {
+        height: 400px;
+        width: 400px;
+    }
+    
+    #bunnies_section_img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .index_sections_h2 {
+        text-align: center;
+        position: relative;
+    }
+}
+
+.rubrik {
+    text-align: center;
+}
+
+.container_for_index_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px 20px;
 }
 
 #nav_for_index {
@@ -154,20 +222,21 @@ img {
     max-width: 100%;
 }
 
-.puppies_section_img {
-    height: 400px;
-    width: 400px;
+#puppies_section_img {
+    height: 200px;
+    width: 200px;
 }
 
-.kittens_section_img {
-    height: 400px;
-    width: 400px;
+#kittens_section_img {
+    height: 200px;
+    width: 200px;
 }
 
-.bunnies_section_img {
-    height: 400px;
-    width: 400px;
+#bunnies_section_img {
+    height: 200px;
+    width: 200px;
 }
+
 
 #om_oss_hemsidan {
     display: grid;
@@ -210,4 +279,13 @@ img {
 .footer_for_om_oss {
     grid-area: foo;
     background: gray;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    float: left;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
