@@ -16,6 +16,7 @@
 nav {
     display: flex;
     justify-content: space-between;
+    background: white;
 }
 
 a {
@@ -32,45 +33,42 @@ li {
     width: 50%;
 }
 
-.puppies {
-    display: flex;
-    flex-direction: row;
-    padding: 10px 5px 5px;
-}
-
-.puppies_inner_div {
-    flex: 0 0 calc(50% - 16px);
-    width: 40vw;
-    height: 40vh;
-}
-
-.kittens {
-    display: flex;
-    flex-direction: row;
-    padding: 10px 5px 5px;
-}
-
-.kittens_inner_div {
-    flex: 0 0 calc(50% - 16px);
-    width: 40vw;
-    height: 40vh;
-}
-
-.bunnies {
-    display: flex;
-    flex-direction: row;
-    padding: 10px 5px 5px;
-}
-
-.bunnies_inner_div {
-    flex: 0 0 calc(50% - 16px);
-    width: 40vw;
-    height: 40vh;
+.title_to_index_header {
+    text-align: center;
 }
 
 .index_sections_h2 {
     text-align: center;
     position: relative;
+    padding-top: 20px;
+}
+
+.djurungar_title {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .rubrik {
+        text-align: center;
+        padding-top: none;
+    }
+
+    .title_to_index_header {
+        padding-top: 90px;
+        position: relative;
+    }
+
+    .container_for_index_section {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 5px 5px;
+    }
+    
+    .index_inner_div {
+        flex: 0 0 calc(50% - 16px);
+        width: 40vw;
+        height: 40vh;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -90,9 +88,27 @@ li {
         right: 0;
         text-align: center;
     }
-    .links_to_delhemsidor li {
-        text-align: right;
+
+    .links_to_delhemsidor {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
+
+    .links_to_delhemsidor li {
+        text-align: center;
+        padding: 40px;
+        border-bottom: 1px solid;
+    }
+
+    .title_to_index_header {
+        text-align: center;
+        margin-top: 20px;
+    }
+
     .burger div {
         width: 50px;
         height: 10px;
@@ -103,14 +119,14 @@ li {
     }
     .show{
         display: block;
-        right: 0;
+        left: 0;
     }
     .burger.visible{
         display: block;
     }
     .navbar{
         height: 100vh;
-        width: 80vw;
+        width: 50vw;
         position: fixed;
         top: 0;
         right: -90vw;
@@ -118,32 +134,14 @@ li {
         z-index: 10;
         overflow: hidden;
     }
-    .puppies {
+
+    .container_for_index_section {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px 10px 10px;
     }
 
-    .kittens {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 10px 10px;
-    }
-    .bunnies {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 10px 10px;
-    }
-
-    #puppies_section_text {
-        box-sizing: border-box;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
     #kittens_section_text {
         box-sizing: border-box;
         padding-left: 30px;
@@ -155,11 +153,7 @@ li {
         padding-right: 30px;
         box-sizing: border-box;
     }
-    #puppies_section_img {
-        height: 400px;
-        width: 400px;
-    }
-    
+
     #kittens_section_img {
         height: 400px;
         width: 400px;
@@ -189,7 +183,6 @@ li {
 
 #nav_for_index {
     grid-area: nai;
-    background: white;
 }
 
 .header_for_index {
@@ -214,7 +207,6 @@ li {
 
 .footer_for_index {
     grid-area: foi;
-    background: slateblue;
 }
 
 img {
@@ -249,7 +241,6 @@ img {
 
 #nav_for_om_oss {
     grid-area: nao;
-    background: violet;
 }
 
 .header_for_om_oss {
