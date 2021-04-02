@@ -47,10 +47,27 @@ li {
     text-align: center;
 }
 
+.cred_rubrik {
+    text-align: center;
+}
+
+.cred_list {
+    text-align: center;
+}
+
+.rubrik_till_om_oss {
+    text-align: center;
+}
+
+.information_inner_div {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 @media screen and (min-width: 768px) {
     .rubrik {
         text-align: center;
-        padding-top: none;
+        padding-top: 0;
     }
 
     .title_to_index_header {
@@ -61,13 +78,17 @@ li {
     .container_for_index_section {
         display: flex;
         flex-direction: row;
-        padding: 10px 5px 5px;
+        padding: 20px 5px 5px;
     }
     
     .index_inner_div {
-        flex: 0 0 calc(50% - 16px);
+        flex: 0 0 calc(50% - 1px);
         width: 40vw;
         height: 40vh;
+    }
+
+    .cred_rubrik {
+        padding-top: 20px;
     }
 }
 
@@ -168,6 +189,9 @@ li {
         text-align: center;
         position: relative;
     }
+    .cred_rubrik {
+        padding-top: 10px;
+    }
 }
 
 .rubrik {
@@ -183,26 +207,32 @@ li {
 
 #nav_for_index {
     grid-area: nai;
+    border-top: hidden;
 }
 
 .header_for_index {
     grid-area: hei;
-    background: royalblue;
+    background: white;
+    border-bottom: 3px dotted gray;
+    border-top: 3px dotted gray;
 }
 
 .puppies {
     grid-area: pui;
-    background: seagreen;
+    background: white;
+    border-bottom: 3px dotted gray;
 }
 
 .kittens {
     grid-area: kii;
-    background: tomato;
+    background: white;
+    border-bottom: 3px dotted gray;
 }
 
 .bunnies {
     grid-area: bui;
-    background: pink;
+    background: white;
+    border-bottom: 3px dotted gray;
 }
 
 .footer_for_index {
@@ -255,6 +285,8 @@ img {
 
 .centered_text {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .picture_for_om_oss {
@@ -264,7 +296,7 @@ img {
 
 .cred {
     grid-area: cro;
-    background: blue;
+    background: white;
 }
 
 .footer_for_om_oss {
