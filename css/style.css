@@ -16,7 +16,6 @@
 nav {
     display: flex;
     justify-content: space-between;
-    background: white;
 }
 
 a {
@@ -25,16 +24,18 @@ a {
 
 li {
     list-style: none;
-    border-bottom: 1px black;
 }
 
 li a {
     color: black;
-    padding: 20px 25px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
     color: black;
+    background: white;
+    border-radius: 50px;
 }
 
 .links_to_delhemsidor {
@@ -55,29 +56,31 @@ a {
 
 .djurungar_title {
     text-align: center;
+    font-size: 40px;
 }
 
 .cred_rubrik {
     text-align: center;
 }
 
-.cred_list {
-    text-align: center;
-}
-
 .rubrik_till_om_oss {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 70px;
 }
 
 .information_inner_div {
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: inline-block;
+    padding: 20px 15px;
+    border-radius: 200px;
+    background: lightblue;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.information_inner_div:hover {
+    opacity: 0.3;
 }
 
 #who_we_are {
@@ -96,26 +99,39 @@ a {
     .rubrik {
         text-align: center;
     }
-
     .title_to_index_header {
         padding-top: 90px;
         position: relative;
     }
-
     .container_for_index_section {
         display: flex;
         flex-direction: row;
         padding: 20px 5px 5px;
     }
-    
     .index_inner_div {
         flex: 0 0 calc(50% - 1px);
         width: 40vw;
         height: 40vh;
     }
-
     .cred_rubrik {
         padding-top: 20px;
+    }
+    .container_for_leksidans_inner_divs {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .inner_div_for_leka {
+        padding: 60px;
+    }
+    #leka_hemsidan {
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 80% 10%;
+        width: 100vw;
+        height: 200vh;
+    }
+    .container_for_nav_och_header {
+        grid-area: com;
+        background: white;
     }
 }
 
@@ -125,12 +141,11 @@ a {
         width: 100vw;
         height: 300vh;
     }
-
     #om_oss_hemsidan {
         display: grid;
         grid-template-areas: 'nao' 'heo' 'ino' 'pio' 'cro' 'foo';
         grid-template-columns: 100%;
-        grid-template-rows: 10% 25% 25% 10% 25% 5%;
+        grid-template-rows: 10% 15% 25% 10% 25% 5%;
         width: 100vw;
         height: 300vh;
     }
@@ -145,7 +160,6 @@ a {
         right: 0;
         text-align: center;
     }
-
     .links_to_delhemsidor {
         display: block;
         position: absolute;
@@ -154,18 +168,14 @@ a {
         height: 100%;
         width: 100%;
     }
-
     .links_to_delhemsidor li {
         text-align: center;
         padding: 40px;
-        border-bottom: 1px solid;
     }
-
     .title_to_index_header {
         text-align: center;
         margin-top: 20px;
     }
-
     .burger div {
         width: 50px;
         height: 10px;
@@ -174,14 +184,14 @@ a {
         margin: 5px 0px;
         cursor: pointer;
     }
-    .show{
+    .show {
         display: block;
         left: 0;
     }
-    .burger.visible{
+    .burger.visible {
         display: block;
     }
-    .navbar{
+    .navbar {
         height: 100vh;
         width: 50vw;
         position: fixed;
@@ -191,42 +201,79 @@ a {
         z-index: 10;
         overflow: hidden;
     }
-
+    .container_for_nav_och_header {
+        grid-area: com;
+        background: transparent;
+    }
     .container_for_index_section {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px 10px 10px;
     }
-
     #kittens_section_text {
         box-sizing: border-box;
         padding-left: 30px;
         padding-right: 30px;
     }
-    
     #bunnies_section_text {
         padding-left: 30px;
         padding-right: 30px;
         box-sizing: border-box;
     }
-
     #kittens_section_img {
         height: 400px;
         width: 400px;
     }
-    
     #bunnies_section_img {
         height: 400px;
         width: 400px;
     }
-
     .index_sections_h2 {
         text-align: center;
         position: relative;
     }
     .cred_rubrik {
         padding-top: 10px;
+    }
+    .container_for_leksidans_inner_divs {
+        display: flex;
+        flex-direction: column;
+    }
+    .leka_rubrik {
+        text-align: center;
+    }
+    .inner_div_for_leka {
+        flex: 0 0 calc(50% - 1px);
+        padding: 20px;
+    }
+    #leka_hemsidan {
+        display: grid;
+        grid-template-areas: 'nal' 'mal' 'fol';
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 80% 10%;
+        width: 100vw;
+        height: 300vh;
+    }
+    .container_for_sova_texten {
+        display: flex;
+        text-align: center;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .sova_rubrik {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    #sova_hemsidan {
+        display: grid;
+        grid-template-areas: 'nas' 'mas' 'fos';
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 80% 10%;
+        width: 100vw;
+        height: 200vh;
     }
 }
 
@@ -244,6 +291,7 @@ a {
 
 #nav_for_index {
     grid-area: nai;
+    background: white;
     border-top: hidden;
 }
 
@@ -296,7 +344,6 @@ img {
     width: 200px;
 }
 
-
 #om_oss_hemsidan {
     display: grid;
     grid-template-areas: 'nao' 'heo' 'ino' 'pio' 'cro' 'foo';
@@ -308,17 +355,25 @@ img {
 
 #nav_for_om_oss {
     grid-area: nao;
+    background: white;
 }
 
 .header_for_om_oss {
     grid-area: heo;
-    border-bottom: 3px dotted gray;
-    border-top: 3px dotted gray;
+    background: lightpink;
 }
 
 .information {
     grid-area: ino;
-    border-bottom: 3px dotted gray;
+}
+
+.container_for_informationstexter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .centered_text {
@@ -329,14 +384,26 @@ img {
 
 .picture_for_om_oss {
     grid-area: pio;
-    background: brown;
-    border-bottom: 3px dotted gray;
+    background: lightpink;
+}
+
+.container_for_cred_innehåll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .cred {
     grid-area: cro;
-    background: white;
     border-bottom: 3px dotted gray;
+}
+
+.cred_person {
+    background: white;
+    text-align: center;
 }
 
 .footer_for_om_oss {
@@ -358,4 +425,175 @@ img {
 
 .active {
     background: #ffb6c1;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+#leka_hemsidan {
+    display: grid;
+    grid-template-areas: 'nal' 'mal' 'fol';
+}
+
+#nav_for_leka {
+    grid-area: nal;
+    background: white;
+}
+
+.main_for_leka {
+    grid-area: mal;
+    padding: 40px 20px 20px;
+}
+
+.container_for_leksidans_inner_divs {
+    display: flex;
+}
+
+.leka_rubrik {
+    text-align: center;
+}
+
+.inner_div_for_leka {
+    flex: 0 0 calc(50% - 1px);
+}
+
+.footer_for_leka {
+    grid-area: fol;
+}
+
+#mat_hemsidan {
+    display: grid;
+    grid-template-areas: 'com' 'fom';
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container_for_nav_och_header {
+    grid-area: com;
+}
+
+.bakgrund_for_mat_hemsidan {
+    height: 100%;
+    width: 100%;
+    background: url("../img/vegetables.jpg") center/cover no-repeat fixed;
+    margin-top: auto;
+}
+
+.footer_for_mat {
+    grid-area: fom;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.djurmat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.djurmat .matsidans_rubrik {
+    background: white;
+    font-size: 60px;
+}
+
+.button_for_kattmat {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 200px;
+    background: lightpink;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_for_kattmat:hover {
+    opacity: 0.3;
+}
+
+.button_for_hundmat {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 200px;
+    background: lightblue;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_for_hundmat:hover {
+    opacity: 0.3;
+}
+
+.button_for_kaninmat {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 200px;
+    background: lightpink;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_for_kaninmat:hover {
+    opacity: 0.3;
+}
+
+#sova_hemsidan {
+    display: grid;
+    grid-template-areas: 'nas' 'mas' 'fos';
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav_for_sova {
+    grid-area: nas;
+    background: white;
+}
+
+.main_for_sova {
+    grid-area: mas;
+}
+
+.footer_for_sova {
+    grid-area: fos;
+}
+
+.container_for_sova_texten {
+    display: flex;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.sova_rubrik {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 40px;
+    padding-bottom: 50px;
 }

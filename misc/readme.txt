@@ -8,3 +8,4 @@ OBS:
 love_logo_16_59.psd är loggan som jag använt på hemsidan (men som inte har lagermask)
 och här lägger jag även till en logga som också har lagermask som heter: 
 love_logo_med_lager.psd
+djurungar_text.psd är den bild-texten som jag har överst på sidorna
